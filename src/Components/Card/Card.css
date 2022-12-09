@@ -1,0 +1,62 @@
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.281);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.178);
+    transition: .2s ease;
+}
+
+.card:hover{
+    scale: 1.03;
+}
+
+.card:hover .icon{
+    rotate: 360deg;
+}
+
+.card .icon{
+    height: 80px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background:linear-gradient(var(--clr-a), var(--clr-b));
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.card .icon img{
+    position: relative;
+    height: 60%;
+}
+
+.card .icon::before{
+    position: absolute;
+    content:'';
+    height: calc(100% - 8px);
+    aspect-ratio:1/1;
+    border-radius: 50%;
+    background-color: rgb(214, 231, 247);
+}
+
+.card h1{
+    color: var(--clr-b);
+    font-family: roboto;
+    font-size:20px;
+    margin-top:8px;
+}
+
+.card span{
+    color: rgba(255, 255, 255, 0.815);
+    font-family: roboto;
+    margin-top: 6px;
+}

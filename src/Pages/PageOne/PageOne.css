@@ -1,0 +1,126 @@
+.bg{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    left: 60%;
+}
+
+.bg .oval{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width:350px;
+    background:linear-gradient(#e7986a, #8d2caa, #4a137e);
+    border-radius: 50%;
+    box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.582);
+    animation: float 1s ease-in-out infinite alternate;
+}
+
+.bg .oval .hands{
+    position: absolute;
+    height:190px;
+    width:30px;
+    border-radius: 50%;
+    margin: 10px;
+    background: linear-gradient(#e7986a, #8d2caa);
+}
+.bg .oval .hands.left{
+    right: 100%;
+    rotate: 8deg;
+    box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.582);
+}
+.bg .oval .hands.right{
+    left:100%;
+    rotate: -8deg;
+}
+
+@keyframes float {
+    to{
+        translate: 0 -30px;
+    }
+}
+
+.bg .shadow{
+    position: absolute;
+    height: 35px;
+    width: 350px;
+    border-radius:100%;
+    background-color: rgba(0, 0, 0, 0.308);
+    bottom:10px;
+    animation: shrink 1s ease-in-out infinite alternate;
+}
+@keyframes shrink {
+    to{
+        scale: .5;
+    }
+}
+
+.page-one-text-container{
+    position: relative;
+    display: flex;
+    width:85%;
+    flex-direction: column;
+    justify-self: center;
+    margin-top:70px;
+}
+
+.page-one-text-container .main-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    font-family: oswald;
+}
+
+.page-one-text-container .main-text h1{
+    font-size: 85px;
+    line-height: 40px;
+}
+
+.page-one-text-container .main-text h2{
+    color: var(--clr-a);
+    font-size: 80px;
+    text-shadow: 0 4px 0 var(--clr-b), 0 8px 0 var(--clr-c), 0 12px 0 rgba(0, 0, 0, 0.685);
+}
+
+.page-one-text-container .main-text h2 span{
+    font-style: italic;
+}
+
+.page-one-text-container .intro-text{
+    margin-top: 15px;
+    font-family: roboto;
+    max-width:45%;
+    color:black;
+    background-color: rgba(255, 255, 255, 0.205);
+    padding:15px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.page-one-text-container .bottom-row{
+    display: flex;
+    font-family: roboto;
+    margin-top: 80px;
+    gap:40px;
+    color:black;
+}
+
+.page-one-text-container .bottom-row .item{
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.page-one-text-container .bottom-row .item.active{
+    background-color: var(--clr-a);
+    color:white;
+    font-weight: normal;
+}

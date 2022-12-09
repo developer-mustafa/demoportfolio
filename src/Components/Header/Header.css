@@ -1,0 +1,94 @@
+.header{
+    position:relative;
+    display:flex;
+    width:85%;
+    justify-content:space-between;
+    align-items: center;
+    padding:15px 0;
+    font-family: Roboto;
+}
+
+.header .header-title{
+    font-size:18px;
+    color:var(--clr-c);
+    display: flex;
+    align-items:center;
+    gap:5px;
+}
+
+.header .header-title .logo{
+    font-size:30px;
+}
+
+.header .nav{
+    display: flex;
+    gap:35px;
+}
+
+.header .nav h3{
+    font-size:14px;
+    font-weight: 600;
+    padding:5px;
+    color:var(--clr-b);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .nav h3::after{
+    position:absolute;
+    content:"";
+    height:2px;
+    width:0;
+    border-radius:100px;
+    bottom:0;
+    right: 0;
+    background-color: var(--clr-b);
+    transition: .2s ease;
+}
+
+.header .nav h3:hover::after{
+    left: 0;
+    width:100%;
+}
+
+.header .header-right{
+    position: relative;
+    display: flex;
+    align-items:center;
+    gap:3px;
+}
+
+.header .header-right::before{
+    position: relative;
+    content: "";
+    height:10px;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    background-color: var(--clr-c);
+    border:2px solid var(--clr-c);
+    animation:animate .8s ease-out alternate infinite;
+}
+@keyframes animate{
+    to{
+        background-color: transparent;
+    }
+}
+
+.header .header-right::after{
+    position: relative;
+    content: "";
+    height: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--clr-c);
+    animation: animatee .8s ease-out .8s alternate infinite;
+}
+@keyframes animatee {
+    to {
+        background-color: var(--clr-c);
+    }
+}
